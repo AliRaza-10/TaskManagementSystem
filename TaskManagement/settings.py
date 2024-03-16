@@ -11,10 +11,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
-import environ
-env = environ.Env()
-environ.Env.read_env()
-# from dotenv import load_dotenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -22,10 +18,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = "django-insecure-p$-nl(f2tp2-&na7vtdlbl%)z76!f6kngqka#t*mghso*6b-0l"
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG')
-ALLOWED_HOSTS = ['localhost',]
+DEBUG = True
+ALLOWED_HOSTS = ['127.0.0.1',]
 
 # Application definition
 
@@ -76,11 +72,11 @@ WSGI_APPLICATION = 'TaskManagement.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': "django.db.backends.mysql",
-        'NAME': os.environ.get('NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('PASSWORD'),
-        'PORT': os.environ.get('PORT'),
-        'HOST': os.environ.get('HOST'),
+        'NAME': "taskmanagement",
+        'USER': "root",
+        'PASSWORD': "1234",
+        'PORT': "3306",
+        'HOST': "127.0.0.1",
     }
 }
 
