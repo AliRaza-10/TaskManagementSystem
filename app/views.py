@@ -13,7 +13,7 @@ from .models import *
 def send_task_notification_email(subject, message, recipient_list):
     subject = subject
     message = message
-    from_email = 'numeer.qadri@arbisoft.com'
+    from_email = 'ali@gmail.com'
     recipient_list = recipient_list
     fail_silently = False
     send_mail(subject, message, from_email, recipient_list)
